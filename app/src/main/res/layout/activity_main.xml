@@ -6,13 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/post_avatar_size"
+        android:layout_height="@dimen/post_avatar_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_netology"
+        android:contentDescription="@string/Visuallyimpaired" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/authorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="30sp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        app:layout_constraintBottom_toTopOf="@id/datepost"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:layout_constraintEnd_toStartOf="@id/options"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_goneMarginEnd="16dp"
+        android:text="@string/Avtorname"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/datepost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/authorName"
+        app:layout_constraintEnd_toEndOf="@id/authorName"
+        app:layout_constraintTop_toBottomOf="@id/authorName"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        android:text="@string/date"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nmedia"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_options_24dp"
+        android:background="@android:color/transparent"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="avatar,datepost,options"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        android:text="@string/Textposta"
+        android:textSize="16sp"
+        android:padding="@dimen/common_spacing"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barriertextpost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textpost"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/favorit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_favorite_border_24dp"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+       />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textlike"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+        app:layout_constraintStart_toEndOf="@id/favorit"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:text="@string/like"
+        android:textSize="16sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/share"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+        app:layout_constraintStart_toEndOf="@id/textlike"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:src="@drawable/ic_share_24dp"
+        android:background="@android:color/transparent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textshare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+        app:layout_constraintStart_toEndOf="@id/share"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:text="@string/share"
+        android:textSize="16sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/visibility"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+
+        app:layout_constraintEnd_toStartOf="@id/textvisibility"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:src="@drawable/ic_visibility_24dp"
+        android:background="@android:color/transparent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textvisibility"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/barriertextpost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:text="@string/visibl"
+        android:textSize="16sp"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
