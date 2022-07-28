@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">1.0</string>
+    <string name="nmedia">NMedia!</string>
+    <string name="Visuallyimpaired">Netology icon set</string>
+    <string name="Textposta" translatable="false">Привет, это новая Неотология! Когда-то Неотология начиналась с интенсивов по онлайн-маркентингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растем сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остается с нами: мы верим. что в каждом уже есть сила, которая заставляет хотеть больше, целится выше, бежать быстрее. Наша миссия - помочь встать на путь роста и начать цепочку перемен - https://netology.ru</string>
+    <string name="Avtorname" translatable="false">Петров Петров Петров</string>
+    <string name="date" translatable="false">21.07.22</string>
+    <string name="like" translatable="false">1000</string>
+    <string name="share" translatable="false">1000</string>
+    <string name="visibl" translatable="false">1000</string>
+    <string name="likee" translatable="false">Like</string>
+    <string name="Option" translatable="false">options</string>
+    <string name="Shar" translatable="false">share</string>
+    <string name="visibilit" translatable="false">visibility</string>
+</resources>
