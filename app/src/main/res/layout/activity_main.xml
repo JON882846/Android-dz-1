@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/common_spacing"
     tools:context=".MainActivity">
+
 
     <ImageView
         android:id="@+id/avatar"
@@ -15,7 +17,7 @@
         app:srcCompat="@drawable/ic_netology"
         android:contentDescription="@string/Visuallyimpaired" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/authorName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -31,7 +33,7 @@
         app:layout_goneMarginEnd="16dp"
         android:text="@string/Avtorname"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/datepost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -45,7 +47,7 @@
         android:text="@string/date"
         />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <ImageButton
         android:id="@+id/options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,6 +55,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/ic_options_24dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/Option"
         />
 
     <androidx.constraintlayout.widget.Barrier
@@ -63,7 +66,7 @@
         app:constraint_referenced_ids="avatar,datepost,options"
         />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/textpost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,42 +84,45 @@
         app:constraint_referenced_ids="textpost"
         />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/favorit"
+    <ImageButton
+        android:id="@+id/like"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_favorite_border_24dp"
+        android:contentDescription="@string/likee"
+        app:srcCompat="@drawable/ic_favorite_border_24dp"
         app:layout_constraintTop_toTopOf="@id/barriertextpost"
-       />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textlike"
+        />
+
+    <TextView
+        android:id="@+id/likeCount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/barriertextpost"
-        app:layout_constraintStart_toEndOf="@id/favorit"
+        app:layout_constraintStart_toEndOf="@id/like"
         android:layout_marginTop="@dimen/common_spacing"
         android:layout_marginStart="@dimen/common_spacing"
         android:text="@string/like"
         android:textSize="16sp"
         />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <ImageButton
         android:id="@+id/share"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
         app:layout_constraintTop_toTopOf="@id/barriertextpost"
-        app:layout_constraintStart_toEndOf="@id/textlike"
+        app:layout_constraintStart_toEndOf="@id/likeCount"
         android:layout_marginStart="@dimen/common_spacing"
         android:src="@drawable/ic_share_24dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/Shar"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textshare"
+        android:id="@+id/shareCount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/barriertextpost"
@@ -127,7 +133,7 @@
         android:textSize="16sp"
         />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <ImageButton
         android:id="@+id/visibility"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -138,9 +144,10 @@
         android:layout_marginEnd="@dimen/common_spacing"
         android:src="@drawable/ic_visibility_24dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/visibilit"
         />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <TextView
         android:id="@+id/textvisibility"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
