@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toStartOf="@id/options"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_goneMarginEnd="16dp"
-        android:text="@string/Avtorname"/>
+        />
 
     <TextView
         android:id="@+id/datepost"
@@ -44,7 +44,6 @@
         app:layout_constraintEnd_toEndOf="@id/authorName"
         app:layout_constraintTop_toBottomOf="@id/authorName"
         app:layout_constraintBottom_toBottomOf="@id/avatar"
-        android:text="@string/date"
         />
 
     <ImageButton
@@ -71,7 +70,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/barrier"
-        android:text="@string/Textposta"
         android:textSize="16sp"
         android:padding="@dimen/common_spacing"
         />
@@ -139,7 +137,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
         app:layout_constraintTop_toTopOf="@id/barriertextpost"
-
         app:layout_constraintEnd_toStartOf="@id/textvisibility"
         android:layout_marginEnd="@dimen/common_spacing"
         android:src="@drawable/ic_visibility_24dp"
