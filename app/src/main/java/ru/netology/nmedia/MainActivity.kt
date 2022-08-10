@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+       val  binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         viewModel.data.observe(this){post ->
@@ -42,8 +42,6 @@ private fun ActivityMainBinding.render(post:Post){
     shareCount.text = countShar
     like.setImageResource(getLikeIconResId(post.likedByMe))
 }
-
-
 @DrawableRes
 private fun getLikeIconResId(liked:Boolean) =
     if(liked)R.drawable.ic_favorite_24dp else R.drawable.ic_favorite_border_24dp
